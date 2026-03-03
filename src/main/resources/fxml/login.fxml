@@ -1,0 +1,20 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox spacing="15" alignment="CENTER"
+      prefWidth="450"
+      prefHeight="350"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.shoe_store.controller.LoginController">
+
+    <Label text="Авторизация" />
+
+    <TextField fx:id="loginField" promptText="Логин" prefHeight="40.0" style="-fx-font-size: 16px;"/>
+    <PasswordField fx:id="passwordField" promptText="Пароль" prefHeight="40.0" style="-fx-font-size: 16px;"/>
+
+    <Button fx:id="loginButton" text="Войти" onAction="#handleLogin" prefHeight="40.0" maxWidth="130"/>
+    <Button text="Войти как гость" onAction="#handleGuest" prefHeight="40.0" maxWidth="150"/>
+
+</VBox>

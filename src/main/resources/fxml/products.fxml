@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@/table.css"
+            fx:controller="com.example.shoe_store.controller.ProductController">
+
+    <top>
+        <VBox spacing="10">
+            <HBox spacing="20" alignment="CENTER_RIGHT">
+                <Label fx:id="userLabel"/>
+                <Button text="Выйти" onAction="#handleLogout"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+                <TextField fx:id="searchField"
+                           promptText="Поиск..."
+                           prefWidth="200"/>
+
+                <ComboBox fx:id="supplierFilter"
+                          prefWidth="200"/>
+
+                <ComboBox fx:id="sortBox"
+                          prefWidth="200"/>
+
+                <Button fx:id="addButton"
+                        text="Добавить товар"
+                        onAction="#handleAddProduct"/>
+
+                <Button fx:id="deleteButton"
+                        text="Удалить"
+                        onAction="#handleDeleteProduct"/>
+
+                <Button fx:id="ordersButton"
+                        text="Заказы"
+                        onAction="#handleViewOrders"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="productTable" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+            <columns>
+                <TableColumn fx:id="imageColumn" text="Фото" prefWidth="60.0" />
+                <TableColumn fx:id="nameColumn" text="Наименование" prefWidth="200.0" />
+            </columns>
+
+        </TableView>
+    </center>
+</BorderPane>

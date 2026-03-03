@@ -1,0 +1,23 @@
+.root {
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: white;
+}
+
+.secondary-background {
+    -fx-background-color: #7FFF00;
+}
+
+.button {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman";
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f4f4f4;
+}
+
+.table-view .scroll-bar:horizontal {
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+}

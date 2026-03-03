@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0"
+            prefWidth="800.0"
+            stylesheets="@/table.css"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.shoe_store.controller.OrderController">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Назад" onAction="#handleBack" style="-fx-font-family: 'Times New Roman';" />
+            <Button text="Добавить заказ" fx:id="addButton" onAction="#handleAddOrder"/>
+            <Button text="Удалить заказ" fx:id="deleteButton" onAction="#handleDeleteOrder"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="orderTable" focusTraversable="false" style="-fx-background-color: transparent;">
+            <columns>
+                <TableColumn text="ID"/>
+                <TableColumn text="Артикул"/>
+                <TableColumn text="User ID"/>
+                <TableColumn text="Status ID"/>
+                <TableColumn text="Pickup Point"/>
+                <TableColumn text="Pickup Code"/>
+                <TableColumn text="Order Date"/>
+                <TableColumn text="Pickup Date"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

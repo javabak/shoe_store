@@ -1,0 +1,25 @@
+.table-view .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.table-view,
+.table-view:focused {
+    -fx-background-color: transparent, -fx-box-border, -fx-control-inner-background;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-padding: 0;
+}
+
+
+.table-view:focused .table-row-cell:filled:selected,
+.table-row-cell:filled:selected {
+    -fx-background-color: #e0e0e0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #e0e0e0;
+}
