@@ -34,24 +34,4 @@ public final class Order {
                Objects.equals(this.orderDate, that.orderDate) &&
                Objects.equals(this.pickupDate, that.pickupDate);
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(orderId, articleNumber, userName, status, pickupPoint, pickupCode, orderDate, pickupDate);
-    }
-
-    @Override
-    public String toString() {
-        return "Order[" +
-               "orderId=" + orderId + ", " +
-               "articleNumber=" + articleNumber + ", " +
-               "userName=" + userName + ", " +
-               "status=" + status + ", " +
-               "pickupPoint=" + pickupPoint + ", " +
-               "pickupCode=" + pickupCode + ", " +
-               "orderDate=" + orderDate + ", " +
-               "pickupDate=" + pickupDate + ']';
-    }
-
-
 }
